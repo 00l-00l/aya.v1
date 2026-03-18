@@ -2,18 +2,22 @@ aya_active = True
 user_name = input("Как вас зовут? ")
 if user_name == "Сэр":
     print(f"Добро Пожаловать! {user_name}",  "Ая v.1 активирована")
-    command = input("Введите команду: ")
-    if command ==  "Время":
-        print("Функция времени в разработке")
+    
+    while True:
+     command = input("Введите команду ")  
+     if command ==  "Время":
+         print("Функция времени в разработке")
 
-    elif command =="Погода":
-        print("Функция погоды в разработке")
+     elif command =="Погода":
+         print("Функция погоды в разработке")
 
-    elif command =="Выход":
-        print("До свидания")
+     elif command =="Выход":
+         print("До свидания")
+         break
 
-    else:
-        print("Команда не распознана")
+     else:
+         print("Команда не распознана")
+         
 
 elif user_name == "Напарник":
    print(f"Добро пожаловать {user_name}",  "Ая v.1 активирована")
