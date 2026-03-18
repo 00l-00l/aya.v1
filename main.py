@@ -4,14 +4,14 @@ if user_name == "Сэр":
     print(f"Добро Пожаловать! {user_name}",  "Ая v.1 активирована")
     
     while True:
-     command = input("Введите команду ")  
-     if command ==  "Время":
+     command = input("Введите команду ").lower() 
+     if command ==  "время":
          print("Функция времени в разработке")
 
-     elif command =="Погода":
+     elif command =="погода":
          print("Функция погоды в разработке")
 
-     elif command =="Выход":
+     elif command =="выход":
          print("До свидания")
          break
 
