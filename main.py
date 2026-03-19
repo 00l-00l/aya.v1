@@ -1,5 +1,5 @@
 def hello(name):
-    print(f"ДОБРО ПОЖАЛОВАТЬ! {name} Ая V.01 ГОТОВА К РАБОТЕ")
+    print(f"ДОБРО ПОЖАЛОВАТЬ! {name} Ая V.1.0 ГОТОВА К РАБОТЕ")
 
 def check_user(name):
  if name == "сэр":
@@ -24,7 +24,7 @@ if check_user(user_name):
       hello(user_name)
       while True:
        command = input("ВВЕДИТЕ КОМАНДУ ")
-       hundle_command(command) == False
-       break
+       if  hundle_command(command) == False:
+            break
 else:
    print("ДОСТУП ЗАПРЕЩЁН!")
