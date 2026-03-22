@@ -1,5 +1,8 @@
-def hello(name):
-    print(f"ДОБРО ПОЖАЛОВАТЬ! {name} Ая V.1.0 ГОТОВА К РАБОТЕ")
+def hello(name, aya_config):
+  print("Версия:", aya_config["version"])
+  print("Владелец:", aya_config["owner"])
+  print("Активен:", aya_config["active"])
+  print(f"ДОБРО ПОЖАЛОВАТЬ {name}")
 
 def check_user(name):
  if name == "сэр":
@@ -18,10 +21,15 @@ def hundle_command(command):
    else: 
       print("ERROR")
 
-aya_active = True
+
 user_name = input("КАК К ВАМ ОБРАЩАТЬСЯ? ").lower()
+aya_config = {
+       "version": "V 1.0",
+       "owner": user_name,
+       "active": True       
+}
 if check_user(user_name):
-      hello(user_name)
+      hello(user_name, aya_config)
       while True:
        command = input("ВВЕДИТЕ КОМАНДУ ")
        if  hundle_command(command) == False:
