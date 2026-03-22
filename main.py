@@ -31,7 +31,7 @@ aya_config = {
 if check_user(user_name):
       hello(user_name, aya_config)
       while True:
-       command = input("ВВЕДИТЕ КОМАНДУ ")
+       command = input("ВВЕДИТЕ КОМАНДУ ").lower()
        if  hundle_command(command) == False:
             break
 else:
