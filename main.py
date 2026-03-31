@@ -1,3 +1,12 @@
+import os
+if os.path.exists("memory.txt"):
+ with open("memory.txt", "r", encoding="utf-8") as f:
+    user_name = f.read()
+else:
+    user_name = input("КАК К ВАМ ОБРАЩАТЬСЯ? ").lower()
+    with open("memory.txt", "w", encoding="utf-8") as f:
+        f.write(user_name)
+
 def hello(name, aya_config):
   print("Версия:", aya_config["version"])
   print("Владелец:", aya_config["owner"])
@@ -22,7 +31,7 @@ def hundle_command(command):
       print("ERROR")
 
 
-user_name = input("КАК К ВАМ ОБРАЩАТЬСЯ? ").lower()
+
 aya_config = {
        "version": "V 1.0",
        "owner": user_name,
@@ -36,3 +45,4 @@ if check_user(user_name):
             break
 else:
    print("ДОСТУП ЗАПРЕЩЁН!")
+
